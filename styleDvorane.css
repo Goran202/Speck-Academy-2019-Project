@@ -14,7 +14,7 @@ h1 {
 }
 
 nav {
-  float: right;
+  
   padding: 30px 20px;
 }
 
@@ -43,3 +43,29 @@ footer {
 form {
   text-align: center;
 }
+
+.container {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (min-width: 920px) {
+  .container {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+  }}
+
+.hallimage {
+  width: 240px;
+  height: 160px;
+  object-fit: cover;
+  margin: 8px;
+  padding: 8px;
+}
+
+.hallname {
+  text-align: center;
+}
+
