@@ -12,11 +12,11 @@ http.createServer(function (request, response) {
         return value.name;
     }
     var newArray = hr.hallsArray.map(myFunction);
+    var newString = newArray.join(',');
+    console.log(newString);
 
-    console.log(newArray);
     //response.end(newArray);
 
-    //response.end(hr.hallsArray.map(h=>h.name).join(","));
    
     
  }).listen(8081);
