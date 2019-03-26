@@ -1,4 +1,5 @@
 const http = require('http');
+const hr = require("./halls.js");
 
 http.createServer(function (request, response) {
     // Send the HTTP header 
@@ -7,7 +8,9 @@ http.createServer(function (request, response) {
     response.writeHead(200, {'Content-Type': 'text/plain'});
     
     // Send the response body as "Hello World"
-    response.end('Hello World\n');
+    response.end(hr.hallsArray.map(h=>h.name).join(","));
+   
+    
  }).listen(8081);
  
  // Console will print the message
