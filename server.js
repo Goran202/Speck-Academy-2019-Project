@@ -13,11 +13,7 @@ http.createServer(function (request, response) {
     }
     var newArray = hr.hallsArray.map(myFunction);
     var newString = newArray.join(',');
-    console.log(newString);
-
-    //response.end(newArray);
-
-   
+    response.end("String of names separated by commas: " + newString);
     
  }).listen(8081);
  
