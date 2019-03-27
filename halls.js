@@ -32,7 +32,7 @@ hallsArray[2] = {
 }
 hallsArray[3] = {
   id: 3,
-  name: "Hall 03 not uniq name",
+  name: "Hall 03(not uniq name)",
   reservation : {
 	  isReserved: false,
 	  reservedFrom: null,
@@ -45,7 +45,7 @@ hallsArray[3] = {
 }
 hallsArray[4] = {
   id: 4,
-  name: "Hall 03 not uniq name",
+  name: "Hall 03(not uniq name)",
   reservation : {
 	  isReserved: false,
 	  reservedFrom: null,
