@@ -5,8 +5,8 @@ const port = 3000;
 const hallsFile = require("./halls.js");
 var hallsAr = hallsFile.hallsArray;
 var { DateTime } = require('luxon');
-DateTime.local();
 var _ = require('lodash');
+
 //this didint work...
 var newArray = _.filter(hallsAr, { 'reservation.isReserved' : true   });
 
@@ -17,17 +17,16 @@ for (i=0; i <hallsAr.length;i++) {
     newArray2.push(hallsAr[i]);
   }
 }
-console.log(newArray2);
+
+//console.log(newArray2);
 var firstElement = _.first(newArray2);
-//var stringDate = firstElement.reservation.reservedUntil
-//var dt = DateTime.local(firstElement.reservation.reservedUntil);
-//console.log(firstElement);
-//console.log(dt);
+var stringDate = DateTime.fromJSDate(firstElement.reservation.reservedUntil).toLocaleString(DateTime.DATE_HUGE);
+//console.log(stringDate);
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
+  res.end(stringDate);
 });
 
 server.listen(port, hostname, () => {
