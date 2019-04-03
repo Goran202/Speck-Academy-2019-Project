@@ -18,6 +18,11 @@ nav {
   padding: 30px 20px;
 }
 
+.subheader {
+  color: blue;
+  background-color: blue
+}
+
 a {
   padding: 30px 20px;
   color: #fff;
