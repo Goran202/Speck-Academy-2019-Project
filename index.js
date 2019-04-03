@@ -8,8 +8,9 @@ var hallsAr = hallsFile.hallsArray;
 
 app.use('/halls', function (req, res) {
     res.json(hallsFile);
-    
 })
+
+app.use('/', express.static('public'));
 
 //debug code
 /*
