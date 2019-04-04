@@ -18,6 +18,29 @@
       </nav>
      <!--</div>-->
   </header>
+  <nav class="subheader">
+    <a href="/halls">halls route</a>
+    <a href="hallsCreate.html">hallsCreate.html</a>
+    <a href="hallsUpdate.html">hallsUpdate.html</a>
+    <a href="hallsDelete.html">hallsDelete.html</a>
+  </nav>
+  <form action="/hallsUpdate" method="post">
+    <br>
+    <label for="hallId">ID of the hall</label>
+    <br>
+    <input id="hallId" name="hallId" type="text">
+    <br>
+    <label for="reservedUntil">Reserved Until</label>
+    <br>
+    <input id="reservedUntil" name="reservedUntil" type="text">
+    <br>
+    <input type="checkbox" name="isReserved," id="isReserved," value="value">
+    <br>
+    <label for="isReserved,">Is reserved?</label>    
+    <br>
+    <input value="Submit" type="submit">
+    <br>
+  </form>
 
   <footer>
     <h4>Grad Križevci</h4>

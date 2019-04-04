@@ -5,12 +5,12 @@ var app = express();
 
 const hallsFile = require("./halls.js");
 var hallsAr = hallsFile.hallsArray;
+app.use('/', express.static('public'));
 
 app.use('/halls', function (req, res) {
     res.json(hallsFile);
 })
 
-app.use('/', express.static('public'));
 
 //debug code
 /*
