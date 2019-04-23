@@ -24,7 +24,8 @@ CREATE TABLE reservations(
     reservation_status INTEGER,
     reserved_from TIMESTAMP, 
     reserved_until TIMESTAMP,
-    hall_id uuid REFERENCES halls(hall_id)
+    hall_id uuid REFERENCES halls(hall_id), 
+    user_id uuid REFERENCES users(user_id)
     );
 
 CREATE TABLE sessions(
